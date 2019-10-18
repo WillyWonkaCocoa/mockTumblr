@@ -44,6 +44,17 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
         }
         task.resume()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the index path from the cell that was tapped
+        let indexPath = tableView.indexPathForSelectedRow
+        // Get the Row of the Index Path and set as index
+        let index = indexPath?.row
+        // Get in touch with the DetailViewController
+        let detailedViewController = segue.destination as! detailViewController
+        // Pass on the data to the Detail ViewController by setting it's indexPathRow value
+        detailedViewController.index = index
+    }
 
     // MARK: - tableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

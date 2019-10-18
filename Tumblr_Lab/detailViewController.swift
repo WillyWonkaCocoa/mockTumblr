@@ -14,10 +14,11 @@ class detailViewController: UIViewController {
     var index: Int!
     
     override func viewDidLoad() {
+        label.text = ("You tapped the cell at index \(index ?? 5)")
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        label.text = ("You tapped the cell at index\(index)")
+        
     }
     
 
