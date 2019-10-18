@@ -9,6 +9,7 @@
 import UIKit
 
 class photoCell: UITableViewCell {
+    @IBOutlet weak var thumbnail: UIImageView!
     @IBOutlet weak var label: UILabel!
     
     override func awakeFromNib() {

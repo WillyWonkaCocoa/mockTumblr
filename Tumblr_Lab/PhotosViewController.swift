@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class PhotosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     // MARK: - Properties
@@ -40,6 +41,7 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
                 let responseDictionary = dataDictionary["response"] as! [String:Any]
                 self.posts = responseDictionary["posts"] as! [[String: Any]]
                 print(self.posts.count)
+               self.tableView.reloadData()
             }
         }
         task.resume()
@@ -58,12 +60,25 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
 
     // MARK: - tableView Functions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell") as! photoCell
-        
+
+        let post = posts[indexPath.row]
+
+        if let photos = post["photos"] as? [[String: Any]] {
+            //photo is NOT nil, we can use it!
+            
+            let photo = photos[0]
+            let originalSize = photo["original size"] as! [String:Any]
+            let urlString = originalSize["url"] as! String
+            let url = URL(string: urlString)
+            print("setting image")
+            cell.thumbnail.af_setImage(withURL: url!)
+            
+        }
         return cell
     }
 }
