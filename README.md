@@ -17,7 +17,7 @@ Time spent: 6 hours spent in total
 
 ### App Walkthough GIF
 
-<img src="https://imgur.com/jsEYKbY.gif"/>
+<img src="https://imgur.com/9Ra9jkS.gif"/>
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
