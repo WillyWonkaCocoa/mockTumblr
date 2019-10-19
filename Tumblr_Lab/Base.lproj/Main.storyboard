@@ -31,18 +31,9 @@
                                                     <rect key="frame" x="26" y="-42" width="240" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6r-oG-anQ">
-                                                    <rect key="frame" x="39" y="11" width="302" height="33"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="image" destination="nRQ-iF-vnf" id="Jtc-Oj-tyh"/>
-                                            <outlet property="label" destination="G6r-oG-anQ" id="RHt-Xm-vP1"/>
                                             <outlet property="thumbnail" destination="nRQ-iF-vnf" id="TDt-1d-PNa"/>
                                             <segue destination="Bf8-MJ-Wt9" kind="show" id="Qkc-hK-Nzr"/>
                                         </connections>
@@ -93,7 +84,6 @@
         <!--Navigation Controller-->
         <scene sceneID="0vy-8K-VSh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ohB-Jw-wdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rq6-jl-ZR8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dsI-n7-kQI">
@@ -105,6 +95,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="imm-xG-f8P"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohB-Jw-wdr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="114.40000000000001" y="126.38680659670166"/>
         </scene>
