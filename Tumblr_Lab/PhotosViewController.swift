@@ -70,13 +70,9 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
 
         if let photos = post["photos"] as? [[String: Any]] {
             //photo is NOT nil, we can use it!
-            print("valid photos dictionary")
-           let photo = photos[0]
-            // 2.
+            let photo = photos[0]
             let originalSize = photo["original_size"] as! [String: Any]
-            // 3.
             let urlString = originalSize["url"] as! String
-            // 4.
             let url = URL(string: urlString)
             cell.thumbnail.af_setImage(withURL: url!)
         }
